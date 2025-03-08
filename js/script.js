@@ -9,33 +9,55 @@ jQuery(function ($) {
 	'use strict';
 
 	// Mapa de Mapbox
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtdWVsZXBsIiwiYSI6ImNtN3M3NHVkazBjMGoya3BsMndtdWpwcWMifQ.I04bjszA_PvPUpwSlcf03g';  // Reemplaza con tu Access Token
-	const map = new mapboxgl.Map({
-		container: 'map', // ID del contenedor del mapa
-		style: 'mapbox://styles/mapbox/streets-v11', // Estilo del mapa
-		center: [-74.5, 40], // Coordenadas del mapa inicial
-		zoom: 9 // Nivel de zoom inicial
-	  });
-	  
-	  // Definir el marcador en una ubicación específica
-	  const marker = new mapboxgl.Marker()
-		.setLngLat([-74.5, 40]) // Coordenadas del marcador
-		.addTo(map);
-	  
-	  // Crear un pop-up con la imagen
-	  const popup = new mapboxgl.Popup({
-		offset: 25
-	  }).setHTML('<img src="images/projects/project 1/1.jpg" alt="Imagen" width="150">'); // Cambia la URL a la imagen deseada
-	  
-	  // Mostrar el pop-up solo cuando el mouse está sobre el marcador
-	  marker.getElement().addEventListener('mouseenter', () => {
-		marker.setPopup(popup).togglePopup(); // Mostrar el pop-up cuando el mouse entra en el marcador
-	  });
-	  
-	  // Cerrar el pop-up cuando el mouse sale del marcador
-	  marker.getElement().addEventListener('mouseleave', () => {
-		popup.remove(); // Eliminar el pop-up cuando el mouse sale
-	  });
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtdWVsZXBsIiwiYSI6ImNtN3M3NHVkazBjMGoya3BsMndtdWpwcWMifQ.I04bjszA_PvPUpwSlcf03g';
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-81, 35], // Centro inicial aproximado
+    zoom: 7
+});
+
+// Lista de ubicaciones con número de marcadores por ciudad
+const locations = {
+    "Mooresville, NC": { coords: [-80.8101, 35.5849], count: 3 },
+    "Charlotte, NC": { coords: [-80.8431, 35.2271], count: 4 },
+    "Lancaster, SC": { coords: [-80.7704, 34.7212], count: 2 },
+    "Glade Valley, NC": { coords: [-81.0295, 36.4493], count: 3 },
+    "York, SC": { coords: [-81.2348, 34.9943], count: 5 },
+    "Huntersville, NC": { coords: [-80.8428, 35.4107], count: 1 },
+    "McConnells, SC": { coords: [-81.2276, 34.8696], count: 1 },
+    "Rock Hill, SC": { coords: [-81.0251, 34.9249], count: 1 },
+    "Clover, SC": { coords: [-81.2262, 35.1115], count: 1 },
+    "Denver, NC": { coords: [-81.0292, 35.5317], count: 1 },
+    "Granite Falls, NC": { coords: [-81.4301, 35.7968], count: 1 },
+    "Gaffney, SC": { coords: [-81.6497, 35.0718], count: 1 },
+    "Sharon, SC": { coords: [-81.3451, 34.8221], count: 1 },
+    "Hickory, NC": { coords: [-81.3445, 35.7345], count: 1 },
+    "Jonesville, NC": { coords: [-80.8454, 36.2391], count: 1 }
+};
+
+// Función para generar un desplazamiento mayor en los marcadores de la misma ciudad
+function getRandomOffset(factor = 0.05) {
+    return (Math.random() - 0.5) * factor; // Aumentamos el factor para mayor separación
+}
+
+// Agregar los marcadores al mapa
+Object.entries(locations).forEach(([city, data]) => {
+    for (let i = 0; i < data.count; i++) {
+        const marker = new mapboxgl.Marker()
+            .setLngLat([data.coords[0] + getRandomOffset(0.08), data.coords[1] + getRandomOffset(0.08)]) // Mayor separación
+            .addTo(map);
+
+        // Tooltip con el nombre de la ciudad
+        const popup = new mapboxgl.Popup({ offset: 10 }).setText(city);
+
+        // Mostrar popup al pasar el mouse
+        marker.getElement().addEventListener('mouseenter', () => marker.setPopup(popup).togglePopup());
+        marker.getElement().addEventListener('mouseleave', () => popup.remove());
+    }
+});
+
+
 
 	
 	const sections = [
@@ -83,7 +105,7 @@ jQuery(function ($) {
 			<div class="project-item-info">
 				<div class="project-item-info-content">
 					<h3 class="project-item-title">
-						<a href="projects-single.html">${section.name}</a>
+						<a href="projects-single.html"></a>
 					</h3>
 				</div>
 			</div>
