@@ -8,6 +8,143 @@
 jQuery(function ($) {
 	'use strict';
 
+	// Mapa de Mapbox
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtdWVsZXBsIiwiYSI6ImNtN3M3NHVkazBjMGoya3BsMndtdWpwcWMifQ.I04bjszA_PvPUpwSlcf03g';  // Reemplaza con tu Access Token
+	const map = new mapboxgl.Map({
+		container: 'map', // ID del contenedor del mapa
+		style: 'mapbox://styles/mapbox/streets-v11', // Estilo del mapa
+		center: [-74.5, 40], // Coordenadas del mapa inicial
+		zoom: 9 // Nivel de zoom inicial
+	  });
+	  
+	  // Definir el marcador en una ubicación específica
+	  const marker = new mapboxgl.Marker()
+		.setLngLat([-74.5, 40]) // Coordenadas del marcador
+		.addTo(map);
+	  
+	  // Crear un pop-up con la imagen
+	  const popup = new mapboxgl.Popup({
+		offset: 25
+	  }).setHTML('<img src="images/projects/project 1/1.jpg" alt="Imagen" width="150">'); // Cambia la URL a la imagen deseada
+	  
+	  // Mostrar el pop-up solo cuando el mouse está sobre el marcador
+	  marker.getElement().addEventListener('mouseenter', () => {
+		marker.setPopup(popup).togglePopup(); // Mostrar el pop-up cuando el mouse entra en el marcador
+	  });
+	  
+	  // Cerrar el pop-up cuando el mouse sale del marcador
+	  marker.getElement().addEventListener('mouseleave', () => {
+		popup.remove(); // Eliminar el pop-up cuando el mouse sale
+	  });
+
+	
+	const sections = [
+		{ name: "1", count: 9, nick: "prueb" },
+		{ name: "2", count: 6, nick: "prueb" },
+		{ name: "3", count: 4, nick: "prueb" },
+		{ name: "4", count: 3, nick: "prueb" },
+		{ name: "5", count: 4, nick: "prueb" },
+		{ name: "6", count: 4, nick: "prueb" },
+		{ name: "7", count: 5, nick: "prueb" },
+		// { name: "8", count: 1, nick: "prueb" },
+		{ name: "9", count: 7, nick: "prueb" },
+		{ name: "10", count: 5, nick: "prueb" },
+		{ name: "11", count: 5, nick: "prueb" },
+		{ name: "12", count: 4, nick: "prueb" },
+		{ name: "13", count: 8, nick: "prueb" },
+		{ name: "14", count: 5, nick: "prueb" },
+		{ name: "15", count: 10, nick: "prueb" },
+		{ name: "16", count: 8, nick: "prueb" },
+		{ name: "17", count: 5, nick: "prueb" },
+		{ name: "18", count: 6, nick: "prueb" },
+		{ name: "19", count: 1, nick: "prueb" },
+		{ name: "20", count: 8, nick: "prueb" },
+		{ name: "21", count: 4, nick: "prueb" },
+		{ name: "22", count: 6, nick: "prueb" },
+		{ name: "23", count: 4, nick: "prueb" },
+		{ name: "24", count: 7, nick: "prueb" },
+		{ name: "25", count: 7, nick: "prueb" },
+		{ name: "26", count: 3, nick: "prueb" },
+		{ name: "27", count: 14, nick: "prueb" },
+		{ name: "28", count: 13, nick: "prueb" },
+	];
+	
+	function generateSectionHTML(section) {
+        let html = '';
+
+       // Primer imagen visible
+    html += `
+	<div class="col-lg-4 col-md-6 shuffle-item" data-groups='["project${section.name}"]'>
+		<div class="project-img-container">
+			<a class="gallery-popup project${section.name}" href="images/projects/project ${section.name}/1.jpg">
+				<img class="img-fluid" src="images/projects/project ${section.name}/1.jpg" alt="Project ${section.name} - Image 1">
+				<span class="gallery-icon"><i class="fa fa-plus"></i></span>
+			</a>
+			<div class="project-item-info">
+				<div class="project-item-info-content">
+					<h3 class="project-item-title">
+						<a href="projects-single.html">${section.name}</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+`;
+
+
+// Resto de las imágenes, con el atributo "noshow"
+for (let i = 2; i <= section.count; i++) {
+	html += `
+	<div class="col-lg-4 col-md-6 shuffle-item" data-groups='["project${section.name}"]'>
+		<div class="project-img-container">
+			<a class="gallery-popup project${section.name}" href="images/projects/project ${section.name}/${i}.jpg">
+				<img class="img-fluid noshow" src="images/projects/project ${section.name}/${i}.jpg" alt="Project ${section.name} - Image ${i}" loading="lazy">
+				<span class="gallery-icon"><i class="fa fa-plus"></i></span>
+			</a>
+			<div class="project-item-info">
+				<div class="project-item-info-content">
+					<h3 class="project-item-title">
+						<a href="projects-single.html">${section.name}</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	`;
+        }
+
+        return html;
+    }
+
+    // 🔹 Insertar los proyectos en el HTML dentro de `.shuffle-wrapper`
+    $(document).ready(function() {
+		sections.forEach((section, index) => {
+			let projectHTML = generateSectionHTML(section);
+	
+			if (index < 6) {
+				$('.shuffle-wrapper').append(projectHTML); // Se muestran los primeros 6 proyectos
+			} else {
+				$('.shuffle-wrapper').append($(projectHTML).hide().addClass('hidden-project')); // Se ocultan los demás pero en el orden correcto
+			}
+		});
+	
+		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+			itemSelector: '.shuffle-item',
+			sizer: '.shuffle-sizer',
+			buffer: 1
+		});
+	
+		myShuffle.update();
+		// mediaPopup(); 
+	
+		// Evento para mostrar los proyectos ocultos
+		$('#view-more-btn').on('click', function() {
+			$('.hidden-project').fadeIn().removeClass('hidden-project'); // Muestra los proyectos en el orden correcto
+			myShuffle.update(); // Refresca Shuffle.js
+			$(this).hide(); // Oculta el botón
+		});
+    });
+
 	/* ----------------------------------------------------------- */
 	/*  Fixed header
 	/* ----------------------------------------------------------- */
@@ -185,19 +322,27 @@ jQuery(function ($) {
 					sizer: '.shuffle-sizer',
 					buffer: 1
 				});
+		
+				// Evento para cambiar los filtros de Shuffle.js
 				$('input[name="shuffle-filter"]').on('change', function (evt) {
 					var input = evt.currentTarget;
 					if (input.checked) {
 						myShuffle.filter(input.value);
 					}
 				});
+		
 				$('.shuffle-btn-group label').on('click', function () {
 					$('.shuffle-btn-group label').removeClass('active');
 					$(this).addClass('active');
 				});
 			}
 		}
-		projectShuffle();
+		
+		// Llamar la función después de generar los proyectos
+		$(document).ready(function() {
+			projectShuffle();
+		});
+		
 
 
 		// testimonial carousel
@@ -254,17 +399,20 @@ jQuery(function ($) {
 		// media popup
 		function mediaPopup() {
 			$('.gallery-popup').colorbox({
-				rel: 'gallery-popup',
-				transition: 'slideshow',
-				innerHeight: '500'
-			});
-			$('.popup').colorbox({
-				iframe: true,
-				innerWidth: 600,
-				innerHeight: 400
+				rel: function() {
+					return $(this).attr('class').split(' ')[1];  // Agrupar por la clase única de cada proyecto
+				},
+				transition: 'fade',
+				maxWidth: '90%',
+				maxHeight: '90%'
 			});
 		}
-		mediaPopup();
+		
+		// Llamar la función después de generar los proyectos
+		$(document).ready(function() {
+			mediaPopup();
+		});
+		
 
 	});
 

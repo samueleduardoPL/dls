@@ -277,7 +277,7 @@
 			$related = $('.' + boxElement).filter(function () {
 				var options = $.data(this, colorbox);
 				var settings = new Settings(this, options);
-				return (settings.get('rel') === rel);
+				return (settings.get('rel') && settings.get('rel') === rel);;
 			});
 			index = $related.index(settings.el);
 
@@ -608,6 +608,10 @@
 		}
 
 		if (!$obj[0]) { // colorbox being applied to empty collection
+			$(".gallery-popup").each(function(){
+				var group = $(this).attr("rel"); // Obtiene el grupo del atributo rel
+				$(this).colorbox({rel: group, transition: "fade", width: "75%", height: "75%"});
+			});			
 			return $obj;
 		}
 

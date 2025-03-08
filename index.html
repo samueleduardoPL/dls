@@ -55,12 +55,15 @@ FACEBOOK: https://www.facebook.com/themefisher
   <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Mapbox CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+
 
 </head>
 <body>
   <div class="body-inner">
 
-    <div id="top-bar" class="top-bar">
+    <!-- <div id="top-bar" class="top-bar">
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-md-8">
@@ -69,7 +72,6 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </li>
                 </ul>
               </div>
-              <!--/ Top info end -->
   
               <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                 <ul class="list-unstyled">
@@ -88,7 +90,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                       </a>
                     </li>
                 </ul>
-              </div>
+              </div> -->
               <!--/ Top social end -->
           </div>
           <!--/ Content row end -->
@@ -104,7 +106,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           <div class="row align-items-center">
             <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                 <a class="d-block" href="index.html">
-                  <img loading="lazy" src="images/logo.png" alt="Constra">
+                  <img  loading="lazy" src="images/logo.png" alt="Constra">
                 </a>
             </div><!-- logo end -->
   
@@ -114,21 +116,21 @@ FACEBOOK: https://www.facebook.com/themefisher
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle">(+9) 847-291-4353</p>
+                          <p class="info-box-subtitle"><a href="tel:+9809209566">(980) 920-9566</a></p>
                       </div>
                     </div>
                   </li>
-                  <li>
+                  <li> 
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Email Us</p>
-                          <p class="info-box-subtitle">office@Constra.com</p>
+                          <a href="mailto:dlsesolutions@gmail.com"> <p class="info-box-subtitle">dlsesolutions@gmail.com</p></a>
                       </div>
                     </div>
                   </li>
                   
                   <li class="header-get-a-quote">
-                    <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+                    <p><a class="btn btn-primary" href="mailto:dlsesolutions@gmail.com">Get A Quote</a></p>
                   </li>
                 </ul><!-- Ul end -->
             </div><!-- header right end -->
@@ -154,13 +156,15 @@ FACEBOOK: https://www.facebook.com/themefisher
                       </li>
 
                       <li class="nav-item dropdown">
+                        <a href="#nosotros" class="nav-link dropdown-toggle" data-toggle="dropdown">About us </a>
+                      </li>
+
+                      <li class="nav-item dropdown">
                           <a href="#project-area" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects </i></a>
                       </li>
               
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services </i></a>
-                          <ul class="dropdown-menu" role="menu">
-                          </ul>
+                          <a href="index.html#ts-service-area" class="nav-link dropdown-toggle" data-toggle="dropdown">Services </i></a>
                       </li>
               
                     
@@ -194,33 +198,33 @@ FACEBOOK: https://www.facebook.com/themefisher
 <!--/ Header end -->
 
 <div class="banner-carousel banner-carousel-1 mb-0">
-  <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg1.jpg)">
+  <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg8.jpg)">
     <div class="slider-content">
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h2 class="slide-title" data-animation-in="slideInLeft">6 Years of excellence in</h2>
+                <h2 class="slide-title" data-animation-in="slideInLeft">7 Years of excellence in the</h2>
                 <h3 class="slide-sub-title" data-animation-in="slideInRight">Siding Industry</h3>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                    <a href="services.html" class="slider btn btn-primary">Our Services</a>
-                    <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
+                    <a href="#ts-service-area" class="slider btn btn-primary">Our Services</a>
+                    <a href="mailto:dlsesolutions@gmail.com" class="slider btn btn-primary border">Contact Now</a>
                 </p>
-              </div>
+              </div> 
           </div>
         </div>
     </div>
   </div>
 
-  <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg7.jpg)">
+  <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg4.jpg)">
     <div class="slider-content text-left">
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title-box" data-animation-in="slideInDown">Premium Siding Solutions</h2>
-                <h3 class="slide-title" data-animation-in="fadeIn">When Quality Counts</h3>
+                <!-- <h2 class="slide-title-box" data-animation-in="slideInDown">Premium Siding Solutions</h2> -->
+                <h2 class="slide-title-box" style="color: F26104;" data-animation-in="fadeIn">When Quality Counts</h3>
                 <h3 class="slide-sub-title" data-animation-in="slideInLeft">Choose Excellence Every Time</h3>
                 <p data-animation-in="slideInRight">
-                    <a href="services.html" class="slider btn btn-primary border">Our Services</a>
+                    <a href="#ts-service-area" class="slider btn btn-primary border">Our Services</a>
                 </p>
               </div>
           </div>
@@ -233,12 +237,12 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Engineers</h2>
-                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
-                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
+                <h3 class="slide-title" data-animation-in="fadeIn">Your vision, Our expertise</h3>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">Perfect results</h3>
+                <h3 class="slide-title-box" data-animation-in="slideInRight">Delivering siding solutions tailored to your needs.</h3>
                 <div data-animation-in="slideInLeft">
-                    <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
-                    <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
+                    <a href="mailto:dlsesolutions@gmail.com" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
+                    <a href="#ts-features" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
                 </div>
               </div>
           </div>
@@ -247,7 +251,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div>
 </div>
 
-<section class="call-to-action-box no-padding">
+<section  class="call-to-action-box no-padding">
   <div class="container">
     <div class="action-style-box">
         <div class="row align-items-center">
@@ -258,7 +262,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <a class="btn btn-dark" href="#">Request Quote</a>
+                <a class="btn btn-dark" href="mailto:dlsesolutions@gmail.com">Request Quote</a>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->
@@ -266,16 +270,14 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div><!-- Container end -->
 </section><!-- Action end -->
 
-<section id="ts-features" class="ts-features">
+<section style="background-color: #f9f9f9;"  id="ts-features" class="ts-features"> 
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
-          <div class="ts-intro">
+          <div id="nosotros"class="ts-intro">
               <h2 class="into-title">About Us</h2>
-              <h3 class="into-sub-title">We deliver landmark projects</h3>
-              <p>We are rethoric question ran over her cheek When she reached the first hills of the Italic Mountains,
-                she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
-                and the subline of her own road, the Line Lane.</p>
+              <h3 class="into-sub-title">Crafting Exteriors, Building Trust</h3>
+              <p>At DLS Exterior Solutions, we specialize in transforming properties with high-quality siding and exterior solutions. Our team is dedicated to delivering results that enhance the beauty, durability, and value of your home or business.</p>
           </div><!-- Intro box end -->
 
           <div class="gap-20"></div>
@@ -287,7 +289,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                       <i class="fas fa-trophy"></i>
                     </span>
                     <div class="ts-service-box-content">
-                      <h3 class="service-box-title">We've Repution for Excellence</h3>
+                      <h3 class="service-box-title">We’re Known for Excellence</h3>
                     </div>
                 </div><!-- Service 1 end -->
               </div><!-- col end -->
@@ -295,10 +297,10 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="col-md-6">
                 <div class="ts-service-box">
                     <span class="ts-service-icon">
-                      <i class="fas fa-sliders-h"></i>
+                      <i class="fas fa-handshake"></i>
                     </span>
                     <div class="ts-service-box-content">
-                      <h3 class="service-box-title">We Build Partnerships</h3>
+                      <h3 class="service-box-title">Building Strong Partnerships</h3>
                     </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
@@ -322,7 +324,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                       <i class="fas fa-users"></i>
                     </span>
                     <div class="ts-service-box-content">
-                      <h3 class="service-box-title">A Team of Professionals</h3>
+                      <h3 class="service-box-title">A Team You Can Trust</h3>
                     </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
@@ -331,21 +333,21 @@ FACEBOOK: https://www.facebook.com/themefisher
 
         <div class="col-lg-6 mt-4 mt-lg-0">
           <h3 class="into-sub-title">Our Values</h3>
-          <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy street art, tattooed beard literally.</p>
+          <p>We’re driven by our core values to provide exceptional services that exceed expectations every time.</p>
 
           <div class="accordion accordion-group" id="our-values-accordion">
               <div class="card">
                 <div class="card-header p-0 bg-transparent" id="headingOne">
                     <h2 class="mb-0">
                       <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Safety
+                        Quality                      
                       </button>
                     </h2>
                 </div>
               
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                      Delivering Quality Work with Manufacturer-Approved Standards
                     </div>
                 </div>
               </div>
@@ -359,7 +361,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                      Your satisfaction is our top priority. We’re committed to delivering exceptional customer experiences.
                     </div>
                 </div>
               </div>
@@ -373,7 +375,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                      Honesty and transparency guide every decision we make, ensuring trust with our clients and team.
                     </div>
                 </div>
               </div>
@@ -383,58 +385,10 @@ FACEBOOK: https://www.facebook.com/themefisher
         </div><!-- Col end -->
     </div><!-- Row end -->
   </div><!-- Container end -->
-</section><!-- Feature are end -->
+</section><!-- Feature area end -->
 
-<section id="facts" class="facts-area dark-bg">
-  <div class="container">
-    <div class="facts-wrapper">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 ts-facts">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">0</span></h2>
-                <h3 class="ts-facts-title">Total Projects</h3>
-              </div>
-          </div><!-- Col end -->
 
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="647">0</span></h2>
-                <h3 class="ts-facts-title">Staff Members</h3>
-              </div>
-          </div><!-- Col end -->
 
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span></h2>
-                <h3 class="ts-facts-title">Hours of Work</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
-                <h3 class="ts-facts-title">Countries Experience</h3>
-              </div>
-          </div><!-- Col end -->
-
-        </div> <!-- Facts end -->
-    </div>
-    <!--/ Content row end -->
-  </div>
-  <!--/ Container end -->
-</section><!-- Facts end -->
 
 <section id="ts-service-area" class="ts-service-area pb-0">
   <div class="container">
@@ -446,11 +400,11 @@ FACEBOOK: https://www.facebook.com/themefisher
     </div>
     <!--/ Title row end -->
 
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-lg-4">
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\sauna.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
                   <h3 class="service-box-title"><a href="#">Siding Installation</a></h3>
@@ -460,7 +414,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\house-repair.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
                   <h3 class="service-box-title"><a href="#">Siding Repair</a></h3>
@@ -470,24 +424,24 @@ FACEBOOK: https://www.facebook.com/themefisher
   
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\rome.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Custom Siding Design</a></h3>
-                  <p>Create a unique look for your home with our custom siding design services.</p>
+                  <h3 class="service-box-title"><a href="#">Porch Ceilings, Columns & brackets</a></h3>
+                  <p>Design and install porch ceilings, columns and custom made brackets that enhance the aesthetics and functionality of your home.</p>
               </div>
           </div><!-- Service 3 end -->
   
       </div><!-- Col end -->
   
-      <div class="col-lg-4 text-center">
+      <!-- <div class="col-lg-4 text-center">
           <img loading="lazy" class="img-fluid" src="images/services/service-center.jpg" alt="service-avater-image">
-      </div><!-- Col end -->
+      </div>Col end -->
   
       <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\house.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
                   <h3 class="service-box-title"><a href="#">Siding Replacement</a></h3>
@@ -497,25 +451,28 @@ FACEBOOK: https://www.facebook.com/themefisher
   
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\window.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Weatherproofing Siding</a></h3>
-                  <p>Protect your home from the elements with our comprehensive weatherproofing services.</p>
+                  <h3 class="service-box-title"><a href="#">Window Installation</a></h3>
+                  <p>Enhance your home's energy efficiency and durability with our expert window installation services.</p>
               </div>
           </div><!-- Service 5 end -->
   
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
+                  <img loading="lazy" src="images\icon-image\painting.png" alt="service-icon">
               </div>
               <div class="ts-service-box-info">
-                  <h3 class="service-box-title"><a href="#">Siding Inspection</a></h3>
-                  <p>Regular inspections to maintain the quality and integrity of your home's siding.</p>
+                  <h3 class="service-box-title"><a href="#">Exterior Painting</a></h3>
+                  <p>Maintain your home's exterior with our high-quality painting services.</p>
               </div>
           </div><!-- Service 6 end -->
       </div><!-- Col end -->
   </div><!-- Content row end -->
+</section>
+
+
   
 
   </div>
@@ -532,7 +489,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     </div>
     <!--/ Title row end -->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-12">
         <div class="shuffle-btn-group">
           <label class="active" for="all">
@@ -556,119 +513,19 @@ FACEBOOK: https://www.facebook.com/themefisher
           <label for="healthcare">
             <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
           </label>
-        </div><!-- project filter end -->
+        </div>project filter end -->
 
 
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
 
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project1.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project1.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Capital Teltway Building</a>
-                  </h3>
-                  <p class="project-cat">Commercial, Interiors</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 1 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project2.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project2.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Ghum Touch Hospital</a>
-                  </h3>
-                  <p class="project-cat">Healthcare</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 2 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project3.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project3.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">TNT East Facility</a>
-                  </h3>
-                  <p class="project-cat">Government</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 3 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project4.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project4.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Narriot Headquarters</a>
-                  </h3>
-                  <p class="project-cat">Infrastructure</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 4 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project5.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project5.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Kalas Metrorail</a>
-                  </h3>
-                  <p class="project-cat">Infrastructure</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 5 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/project6.jpeg" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/project6.jpeg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Ancraft Avenue House</a>
-                  </h3>
-                  <p class="project-cat">Residential</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 6 end -->
-        </div><!-- shuffle end -->
+          
+          
       </div>
 
       <div class="col-12">
         <div class="general-btn text-center">
-          <a class="btn btn-primary" href="projects.html">View All Projects</a>
+          <button id="view-more-btn" class="btn btn-primary">View All Projects</button>
         </div>
       </div>
 
@@ -683,7 +540,7 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
               <h3>Can We Help?</h3>
-              <h4>(+9) 847-291-4353</h4>
+              <h4>(980) 920-9566</h4>
           </div>
         </div><!-- Col end -->
 
@@ -702,7 +559,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                     </div>
                 </form>
               </div>
-          </div><!-- Newsletter end -->
+            </div>
         </div><!-- Col end -->
 
     </div><!-- Content row end -->
@@ -716,14 +573,14 @@ FACEBOOK: https://www.facebook.com/themefisher
 
     <div class="row text-center">
       <div class="col-12">
-        <h2 class="section-title">Reaching our Office</h2>
-        <h3 class="section-sub-title">Find Our Location</h3>
+        <h2 class="section-title">Reaching Us</h2>
+        <h3 class="section-sub-title">Find Our contact info</h3>
       </div>
     </div>
     <!--/ Title row end -->
 
-    <div class="row">
-      <div class="col-md-4">
+    <div class="row align-items-center justify-content-center">
+      <!-- <div class="col-md-4">
         <div class="ts-service-box-bg text-center h-100">
           <span class="ts-service-icon icon-round">
             <i class="fas fa-map-marker-alt mr-0"></i>
@@ -733,7 +590,7 @@ FACEBOOK: https://www.facebook.com/themefisher
             <p>9051 Constra Incorporate, USA</p>
           </div>
         </div>
-      </div><!-- Col 1 end -->
+      </div> -->
 
       <div class="col-md-4">
         <div class="ts-service-box-bg text-center h-100">
@@ -742,7 +599,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </span>
           <div class="ts-service-box-content">
             <h4>Email Us</h4>
-            <p>office@Constra.com</p>
+            <p><a href="mailto:dlsesolutions@gmail.com">dlsesolutions@gmail.com</a></p>
           </div>
         </div>
       </div><!-- Col 2 end -->
@@ -754,7 +611,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </span>
           <div class="ts-service-box-content">
             <h4>Call Us</h4>
-            <p>(+9) 847-291-4353</p>
+            <p><a href="tel:+9809209566">(980) 920-9566</a></p>
           </div>
         </div>
       </div><!-- Col 3 end -->
@@ -763,11 +620,10 @@ FACEBOOK: https://www.facebook.com/themefisher
 
     <div class="gap-60"></div>
 
-    <div class="google-map">
-      <div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
-    </div>
+    <div id="map" style="width: 100%; height: 500px;"></div>
 
-<section class="content">
+
+<!-- <section class="content">
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
@@ -789,9 +645,9 @@ FACEBOOK: https://www.facebook.com/themefisher
                           <span class="quote-subtext">Chairman, OKT</span>
                       </div>
                     </div>
-                </div><!-- Quote item end -->
+                </div>
               </div>
-              <!--/ Item 1 end -->
+             
 
               <div class="item">
                 <div class="quote-item">
@@ -808,9 +664,8 @@ FACEBOOK: https://www.facebook.com/themefisher
                           <span class="quote-subtext">CFO, First Choice</span>
                       </div>
                     </div>
-                </div><!-- Quote item end -->
+                </div>
               </div>
-              <!--/ Item 2 end -->
 
               <div class="item">
                 <div class="quote-item">
@@ -827,13 +682,11 @@ FACEBOOK: https://www.facebook.com/themefisher
                           <span class="quote-subtext">Director, AKT</span>
                       </div>
                     </div>
-                </div><!-- Quote item end -->
+                </div>
               </div>
-              <!--/ Item 3 end -->
 
           </div>
-          <!--/ Testimonial carousel end-->
-        </div><!-- Col end -->
+        </div>
 
         <div class="col-lg-6 mt-5 mt-lg-0">
 
@@ -844,47 +697,45 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 1 end -->
+              </div>
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 2 end -->
+              </div>
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 3 end -->
+              </div>
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 4 end -->
+              </div>
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 5 end -->
+              </div>
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client6.png" alt="clients-logo" /></a>
                 </figure>
-              </div><!-- Client 6 end -->
+              </div>
 
-          </div><!-- Clients row end -->
+          </div>
 
-        </div><!-- Col end -->
+        </div>
 
     </div>
-    <!--/ Content row end -->
   </div>
-  <!--/ Container end -->
-</section><!-- Content end -->
+</section> -->
 
 
 
@@ -899,11 +750,10 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">About Us</h3>
-            <img loading="lazy" width="200px" class="footer-logo" src="images/logo.png" alt="Constra">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-              labore et dolore magna aliqua.</p>
+            <img loading="lazy" width="200px" class="footer-logo" src="images\LOGO DLS-02.png" alt="Constra">
+            <p>Transforming properties with high-quality siding and exterior solutions.</p>
             <div class="footer-social">
-              <ul>
+              <!-- <ul>
                 <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
                       class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -911,29 +761,28 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
                       class="fab fa-instagram"></i></a></li>
                 <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
-              </ul>
+              </ul> -->
             </div><!-- Footer social end -->
           </div><!-- Col end -->
 
           <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
             <h3 class="widget-title">Working Hours</h3>
             <div class="working-hours">
-              We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+              We work 6 days a week, every day excluding major holidays.    
               Hotline and Contact form.
-              <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-              <br> Saturday: <span class="text-right">12:00 - 15:00</span>
-              <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+              <br><br> Monday - Saturday: <span class="text-right">8:00 am - 6:00 pm </span>
             </div>
           </div><!-- Col end -->
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
             <h3 class="widget-title">Services</h3>
             <ul class="list-arrow">
-              <li><a href="service-single.html">Pre-Construction</a></li>
-              <li><a href="service-single.html">General Contracting</a></li>
-              <li><a href="service-single.html">Construction Management</a></li>
-              <li><a href="service-single.html">Design and Build</a></li>
-              <li><a href="service-single.html">Self-Perform Construction</a></li>
+              <li><a href="#ts-service-area">Siding Installation</a></li>
+              <li><a href="#ts-service-area">Siding Repair</a></li>
+              <li><a href="#ts-service-area">Siding Replacement</a></li>
+              <li><a href="#ts-service-area">Porch Ceilings, Columns & brackets</a></li>
+              <li><a href="#ts-service-area">Exterior Painting</a></li>
+              <li><a href="#ts-service-area">Window Installation</a></li>
             </ul>
           </div><!-- Col end -->
         </div><!-- Row end -->
@@ -947,11 +796,11 @@ FACEBOOK: https://www.facebook.com/themefisher
             <div class="copyright-info">
               <span>Copyright &copy; <script>
                   document.write(new Date().getFullYear())
-                </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a></span>
+                </script>Developed by <a href="">DLS Exterior Solutions</a></span>
             </div>
           </div>
 
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <div class="footer-menu text-center text-md-right">
               <ul class="list-unstyled">
                 <li><a href="about.html">About</a></li>
@@ -962,7 +811,7 @@ FACEBOOK: https://www.facebook.com/themefisher
               </ul>
             </div>
           </div>
-        </div><!-- Row end -->
+        </div>Row end -->
 
         <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
           <button class="btn btn-primary" title="Back to Top">
@@ -990,11 +839,13 @@ FACEBOOK: https://www.facebook.com/themefisher
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
 
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 
   <!-- Google Map API Key-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script> -->
   <!-- Google Map Plugin-->
-  <script src="plugins/google-map/map.js" defer></script>
+  <!-- <script src="plugins/google-map/map.js" defer></script> -->
 
   <!-- Template custom -->
   <script src="js/script.js"></script>
