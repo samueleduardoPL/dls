@@ -19,11 +19,11 @@ const map = new mapboxgl.Map({
 
 // Lista de ubicaciones con número de marcadores por ciudad
 const locations = {
-    "Mooresville, NC": { coords: [-80.8101, 35.5849], count: 3 },
-    "Charlotte, NC": { coords: [-80.8431, 35.2271], count: 4 },
-    "Lancaster, SC": { coords: [-80.7704, 34.7212], count: 2 },
-    "Glade Valley, NC": { coords: [-81.0295, 36.4493], count: 3 },
-    "York, SC": { coords: [-81.2348, 34.9943], count: 5 },
+    "Mooresville, NC": { coords: [-80.8101, 35.5849], count: 1 },
+    "Charlotte, NC": { coords: [-80.8431, 35.2271], count: 1 },
+    "Lancaster, SC": { coords: [-80.7704, 34.7212], count: 1 },
+    "Glade Valley, NC": { coords: [-81.0295, 36.4493], count: 1 },
+    "York, SC": { coords: [-81.2348, 34.9943], count: 1 },
     "Huntersville, NC": { coords: [-80.8428, 35.4107], count: 1 },
     "McConnells, SC": { coords: [-81.2276, 34.8696], count: 1 },
     "Rock Hill, SC": { coords: [-81.0251, 34.9249], count: 1 },
@@ -277,7 +277,7 @@ for (let i = 2; i <= section.count; i++) {
 				$('#back-to-top').tooltip('hide');
 				$('body,html').animate({
 					scrollTop: 0
-				}, 800);
+				}, 100);
 				return false;
 			});
 		}
@@ -290,8 +290,10 @@ for (let i = 2; i <= section.count; i++) {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: true,
+				autoplaySpeed: 10000, // Cambia cada 5 segundos
 				dots: true,
-				speed: 600,
+				speed: 600, // Aumenta el tiempo de transición (2 segundos)
+				cssEase: 'linear', // Hace la transición más suave y progresiva
 				arrows: true,
 				prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
 				nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
@@ -300,16 +302,17 @@ for (let i = 2; i <= section.count; i++) {
 		}
 		bannerCarouselOne();
 
-
 		// banner Carousel Two
 		function bannerCarouselTwo() {
 			$('.banner-carousel.banner-carousel-2').slick({
-				fade: true,
+				fade: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: true,
+				autoplaySpeed: 10000, // Cambia cada 5 segundos
 				dots: false,
-				speed: 600,
+				speed: 600, // Aumenta el tiempo de transición (2 segundos)
+				cssEase: 'linear', // Hace la transición más suave y progresiva
 				arrows: true,
 				prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
 				nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
@@ -317,19 +320,20 @@ for (let i = 2; i <= section.count; i++) {
 		}
 		bannerCarouselTwo();
 
-
 		// pageSlider
 		function pageSlider() {
 			$('.page-slider').slick({
-				fade: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: true,
-				dots: false,
-				speed: 600,
-				arrows: true,
-				prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
-				nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
+				fade: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 10000, // Cambia cada 10 segundos
+			dots: false,
+			speed: 600, // Aumenta el tiempo de transición (2 segundos)
+			cssEase: 'linear', // Hace la transición más suave y progresiva
+			arrows: true,
+			prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
+			nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
 			});
 		}
 		pageSlider();
@@ -373,7 +377,7 @@ for (let i = 2; i <= section.count; i++) {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: true,
-				speed: 600,
+				speed: 1000,
 				arrows: false
 			});
 		}
@@ -385,7 +389,7 @@ for (let i = 2; i <= section.count; i++) {
 			$('.team-slide').slick({
 				dots: false,
 				infinite: false,
-				speed: 300,
+				speed: 700,
 				slidesToShow: 4,
 				slidesToScroll: 2,
 				arrows: true,
