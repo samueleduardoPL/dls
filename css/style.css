@@ -2307,6 +2307,7 @@ img.testimonial-thumb {
     padding-bottom: 10px;
     padding-left: 20px; /* Menos padding para pantallas más pequeñas */
     padding-right: 20px; /* Agregar padding a la derecha */
+    overflow: hidden;
   }
 }
 @media (max-width: 575px) {
@@ -2327,13 +2328,13 @@ img.testimonial-thumb {
   top: 0;
 }
 
-
+/* 
 .newsletter-form input {
   background: none;
   font-size: 12px;
   height: 45px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-}
+} */
 
 /* News section
 ================================================== */
