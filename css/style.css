@@ -2299,16 +2299,19 @@ img.testimonial-thumb {
   position: relative;
   min-height: 115px;
   padding: 15px 0 0 50px;
+  box-sizing: border-box; /* Asegura que los paddings no excedan el tamaño total */
 }
 @media (max-width: 767px) {
   .ts-newsletter {
     padding-top: 20px;
     padding-bottom: 10px;
+    padding-left: 20px; /* Menos padding para pantallas más pequeñas */
+    padding-right: 20px; /* Agregar padding a la derecha */
   }
 }
 @media (max-width: 575px) {
   .ts-newsletter {
-    padding: 30px 5px 15px 5px;
+    padding: 30px 15px 15px 15px; /* Reduce el padding en todos los lados */
     min-height: auto;
     text-align: center;
   }
@@ -2323,6 +2326,7 @@ img.testimonial-thumb {
   right: -100%;
   top: 0;
 }
+
 
 .newsletter-form input {
   background: none;
