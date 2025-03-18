@@ -73,9 +73,9 @@ Object.entries(locations).forEach(([city, data]) => {
 		{ name: "10", count: 5, nick: "prueb" },
 		{ name: "11", count: 5, nick: "prueb" },
 		{ name: "12", count: 4, nick: "prueb" },
-		{ name: "13", count: 8, nick: "prueb" },
-		{ name: "14", count: 5, nick: "prueb" },
-		{ name: "15", count: 10, nick: "prueb" },
+		{ name: "13", count: 11, nick: "prueb" },
+		{ name: "14", count: 2, nick: "prueb" },
+		{ name: "15", count: 6, nick: "prueb" },
 		{ name: "16", count: 8, nick: "prueb" },
 		{ name: "17", count: 5, nick: "prueb" },
 		{ name: "18", count: 6, nick: "prueb" },
@@ -89,6 +89,10 @@ Object.entries(locations).forEach(([city, data]) => {
 		{ name: "26", count: 4, nick: "prueb" },
 		{ name: "27", count: 3, nick: "prueb" },
 		{ name: "28", count: 4, nick: "prueb" },
+		{ name: "29", count: 4, nick: "prueb" },
+		{ name: "30", count: 3, nick: "prueb" },
+
+
 	];
 	
 	function generateSectionHTML(section) {
