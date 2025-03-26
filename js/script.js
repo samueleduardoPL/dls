@@ -33,8 +33,17 @@ const locations = {
     "Gaffney, SC": { coords: [-81.6497, 35.0718], count: 1 },
     "Sharon, SC": { coords: [-81.3451, 34.8221], count: 1 },
     "Hickory, NC": { coords: [-81.3445, 35.7345], count: 1 },
-    "Jonesville, NC": { coords: [-80.8454, 36.2391], count: 1 }
+    "Jonesville, NC": { coords: [-80.8454, 36.2391], count: 1 },
+    "Concord, NC": { coords: [-80.5795, 35.4087], count: 1 },       
+    "Mint Hill, NC": { coords: [-80.6570, 35.1735], count: 1 },     
+    "Matthews, NC": { coords: [-80.7098, 35.1168], count: 1 },      
+    "Fort Mill, SC": { coords: [-80.9415, 35.0035], count: 1 },     
+    "Hudson, NC": { coords: [-81.4903, 35.8456], count: 1 },       
+    "Cornelius, NC": { coords: [-80.8814, 35.4725], count: 1 },     
+    "Troutman, NC": { coords: [-80.8897, 35.6983], count: 1 },     
+    "Boone, NC": { coords: [-81.6669, 36.2111], count: 1 }          
 };
+
 
 // Función para generar un desplazamiento mayor en los marcadores de la misma ciudad
 function getRandomOffset(factor = 0.05) {
